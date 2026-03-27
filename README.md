@@ -14,5 +14,5 @@ A simple, fast, and colorful Python script to organize your files by extension.
 Clone the repository and run the setup script:
 ```bash
 git clone https://github.com/semenpro22gaempro-beep/file-organizer-linux.git
-cd file-organizer
+cd file-organizer-linux
 python3 setup.py
