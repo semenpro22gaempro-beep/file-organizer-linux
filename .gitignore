@@ -1,0 +1,10 @@
+venv/
+.venv/
+env/
+*.pyc
+*.pyo
+*.pyd*
+.log
+.DS_Store
+.vscode/
+.idea/
