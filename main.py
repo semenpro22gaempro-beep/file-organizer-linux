@@ -7,6 +7,7 @@ init(autoreset=True)
 
 def main():
     print(f"{Fore.CYAN}{Style.BRIGHT}=== File Organizer ===\n")
+
     cmd = input("Command (mv/rm): ").strip().lower()
     home = os.path.expanduser("~")
 
@@ -15,7 +16,7 @@ def main():
         dst_input = input(f"{Fore.YELLOW}Target folder: ")
         ext_input = input(f"{Fore.YELLOW}Extension (e.g. png): ").lstrip('.')
 
-        # Пути формируются относительно домашней папки
+        
         src_dir = os.path.join(home, src_input)
         dst_dir = os.path.join(home, dst_input)
 
@@ -23,7 +24,7 @@ def main():
             print(f"\n{Fore.RED}[Error] Source directory not found: {src_dir}")
             return
 
-        # Список файлов
+        
         files = [f for f in os.listdir(src_dir) 
                  if f.lower().endswith(f".{ext_input.lower()}") and os.path.isfile(os.path.join(src_dir, f))]
 

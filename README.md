@@ -1,3 +1,5 @@
+<img width="1474" height="833" alt="image" src="https://github.com/user-attachments/assets/7c55d14c-da78-4dfa-8cf8-4e45d0fe7c1c" />
+
 # 📂 Python File Organizer for Linux
 
 A simple, fast, and colorful Python script to organize your files by extension. 
@@ -11,6 +13,6 @@ A simple, fast, and colorful Python script to organize your files by extension.
 ## 🚀 Installation
 Clone the repository and run the setup script:
 ```bash
-git clone https://github.com
-cd file-organizer
+git clone https://github.com/semenpro22gaempro-beep/file-organizer-linux.git
+cd file-organizer-linux
 python3 setup.py
