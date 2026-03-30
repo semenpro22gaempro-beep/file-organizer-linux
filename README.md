@@ -1,18 +1,26 @@
-<img width="1474" height="833" alt="image" src="https://github.com/user-attachments/assets/7c55d14c-da78-4dfa-8cf8-4e45d0fe7c1c" />
+<img width="954" height="513" alt="image" src="https://github.com/user-attachments/assets/ca764f41-ec7a-42c6-bcfa-0f22627b3fd4" />
 
-# 📂 Python File Organizer for Linux
 
-A simple, fast, and colorful Python script to organize your files by extension. 
+#  Python File Organizer for Linux
+A Python program
+for working with large numbers of files by extension.
 
-## ✨ Features
-- **Smart Move**: Automatically moves files to your chosen directory.
-- **Home Dir Support**: Accepts folder names directly (e.g., `Downloads`, `Pictures`).
-- **Pretty UI**: Uses `colorama` and `tqdm` for a modern terminal look.
-- **Easy Setup**: Includes a Python-based installer.
 
-## 🚀 Installation
+## Commands
+- **rm** Deletes all files of the specified extension.
+- **mv** Moves files with the specified extension to the user-specified folder
+- **distr** Automatically sort files into folders(Pictures-jpg,png)
+- **exit** Exit script
+- **rn** Renames all files with the specified extension.
+
+##  Installation
 Clone the repository and run the setup script:
 ```bash
 git clone https://github.com/semenpro22gaempro-beep/file-organizer-linux.git
+```
+```bash
 cd file-organizer-linux
+```
+```bash
 python3 setup.py
+```
