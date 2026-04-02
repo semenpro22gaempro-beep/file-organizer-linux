@@ -22,7 +22,7 @@ def main():
     print(organizer_art)
     g = "\033[32m"
     y = "\033[35m"
-    print(f" {y}[1]{y}{g}rm{g}\n {y}[2]{y}{g}mv{g}\n {y}[3]{y}{g}rn{g}\n {y}[4]{y}{g}distr{g}\n {y}[5]{y}{g}exit{g}")
+    print(f" {y}[1]{y}{g}rm{g}\n {y}[2]{y}{g}mv{g}\n {y}[3]{y}{g}rn{g}\n {y}[4]{y}{g}distr{g}\n {y}[5]{y}{g}ls{g}\n {y}[6]{y}{g}cd{g}\n {y}[7]{y}{g}cdup{g}\n {y}[8]{y}{g}cdpath{g}\n {y}[9]{y}{g}exit{g}")
 
     while True:
 
@@ -162,8 +162,22 @@ def main():
                 shutil.move(file_path, os.path.join(target_path, filename))
 
             print(f"\n{Fore.GREEN}{Style.BRIGHT}Organization complete!")
-
-
+        elif cmd == "cdpath":
+            current_path = os.getcwd()
+            path = input("Enter the absolute path:")
+            os.chdir(f"{path}")
+            print(f"main directory:{current_path}")
+        elif cmd == "cdup": 
+            current_path = os.getcwd()
+            os.chdir('..')
+            print(f"main directory:{current_path}") 
+        elif cmd == "cd":
+            current_path = os.getcwd() 
+            os.chdir(f"{home}") 
+            print(f"main directory: {current_path}")			
+        elif cmd == "ls":
+            ls = os.listdir('.') 
+            print(ls) 
         else:
             print("Unknown command")
 

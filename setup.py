@@ -25,7 +25,7 @@ def main():
 
     bin_dir = Path.home() / ".local" / "bin"
     bin_dir.mkdir(parents=True, exist_ok=True)
-    launcher_path = bin_dir / "automv"
+    launcher_path = bin_dir / "org"
 
     launcher_content = f"#!/bin/bash\n{venv_dir}/bin/python3 {project_dir}/main.py \"$@\"\n"
 
