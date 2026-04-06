@@ -36,7 +36,7 @@ def main():
         f.write(launcher_content)
     os.chmod(launcher_path, 0o755)
 
-    # АВТОМАТИЧЕСКАЯ НАСТРОЙКА PATH
+    # АВТОМАТИЧЕСКАЯ НАСТРОЙКА ПУТИ ФАЩаьаэшащы
     bashrc = Path.home() / ".bashrc"
     export_cmd = f'export PATH="$HOME/.local/bin:$PATH"'
     
