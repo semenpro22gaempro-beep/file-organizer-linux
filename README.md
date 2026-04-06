@@ -24,3 +24,6 @@ cd file-organizer-linux
 ```bash
 python3 setup.py
 ```
+```bash
+source ~/.bashrc
+```
