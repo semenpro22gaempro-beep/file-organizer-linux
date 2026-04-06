@@ -22,7 +22,9 @@ def main():
     print(organizer_art)
     g = "\033[32m"
     y = "\033[35m"
-    print(f" {y}[1]{y}{g}rm{g}\n {y}[2]{y}{g}mv{g}\n {y}[3]{y}{g}rn{g}\n {y}[4]{y}{g}distr{g}\n {y}[5]{y}{g}ls{g}\n {y}[6]{y}{g}cd{g}\n {y}[7]{y}{g}cdup{g}\n {y}[8]{y}{g}cdpath{g}\n {y}[9]{y}{g}exit{g}")
+    r = "\033[31m"
+    print(f" {y}[1]{y}{g}rm{g}     {y}[2]{y}{g}mv{g}     {y}[3]{y}{g}rn{g}     {y}[4]{y}{g}distr{g}   {y}[5]{y}{g}ls{g}\n"
+    f" {y}[6]{y}{g}cd{g}     {y}[7]{y}{g}cdup{g}   {y}[8]{y}{g}cdpath{g} {y}[9]{y}{g}help{g}    {y}[10]{y}{g}exit{g}")
 
     while True:
 
@@ -178,8 +180,15 @@ def main():
         elif cmd == "ls":
             ls = os.listdir('.') 
             print(ls) 
+        elif cmd == "help":
+            print(f"rm- Deletes all files of the specified extension\n"
+            f"mv- Moves files with the specified extension to the user-specified folder\n"
+            f"distr- Automatically sort files into folders-Pictures-jpg,png\n"
+            f"exit- Exit script\n"
+            f"cd-back in\n" 
+            f"rn- Renames all files with the specified extension.")
         else:
-            print("Unknown command")
-
+            print(f"{r}Unknown command{r}\nall commands-help")
+        
 if __name__ == "__main__":
     main()
