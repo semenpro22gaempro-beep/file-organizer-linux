@@ -16,7 +16,7 @@ def main():
     python_path = venv_dir / "bin" / "python"
     pip_path = venv_dir / "bin" / "pip"
     req_file = project_dir / "requirements.txt"
-    
+
     if not venv_dir.exists():
         print(f"Creating virtual environment in {venv_dir}...")
         run_command(f"'{sys.executable}' -m venv '{venv_dir}'")
@@ -28,31 +28,37 @@ def main():
 
     bin_dir = Path.home() / ".local" / "bin"
     bin_dir.mkdir(parents=True, exist_ok=True)
-    
+
     launcher_path = bin_dir / "org"
     launcher_content = f'#!/bin/sh\nexec "{python_path}" "{project_dir}/main.py" "$@"\n'
-    
+
     with open(launcher_path, "w") as f:
         f.write(launcher_content)
     os.chmod(launcher_path, 0o755)
 
-    # АВТОМАТИЧЕСКАЯ НАСТРОЙКА ПУТИ ФАЩаьаэшащы
-    bashrc = Path.home() / ".bashrc"
-    export_cmd = f'export PATH="$HOME/.local/bin:$PATH"'
-    
-    if bashrc.exists():
-        with open(bashrc, "r") as f:
-            content = f.read()
-        
-        if export_cmd not in content:
-            print("Adding ~/.local/bin to your PATH in .bashrc...")
-            with open(bashrc, "a") as f:
-                f.write(f"\n# Added by setup script\n{export_cmd}\n")
-    
+    shell_configs = [
+        (Path.home() / ".bashrc", 'export PATH="$HOME/.local/bin:$PATH"'),
+        (Path.home() / ".zshrc", 'export PATH="$HOME/.local/bin:$PATH"'),
+        (Path.home() / ".config/fish/config.fish", 'set -gx PATH $HOME/.local/bin $PATH')
+    ]
+
+    for config_path, export_cmd in shell_configs:
+        if config_path.parent.exists():
+            content = ""
+            if config_path.exists():
+                with open(config_path, "r") as f:
+                    content = f.read()
+
+            if export_cmd not in content:
+                print(f"Adding ~/.local/bin to your PATH in {config_path.name}...")
+                with open(config_path, "a") as f:
+                    f.write(f"\n# Added by setup script\n{export_cmd}\n")
+
     print(f"\nSetup finished. Command 'org' is ready.")
     print("-" * 40)
-    print("IMPORTANT: Run the following command now to enable 'org' in this window:")
-    print(f"source {bashrc}")
+    print("To apply changes, restart your terminal or run:")
+    print("source ~/.bashrc  # (for Bash)")
+    print("source ~/.zshrc   # (for Zsh)")
     print("-" * 40)
 
 if __name__ == "__main__":
