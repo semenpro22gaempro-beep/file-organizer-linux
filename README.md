@@ -55,12 +55,5 @@ cd file-organizer-linux
 nano sortconfig.json
 ```
 **Sample and default config:*
-**
-    "Images": [".jpg", ".jpeg", ".png", ".gif", ".webp"],
-    "Videos": [".mp4", ".mkv", ".mov", ".avi"],
-    "Docs": [".pdf", ".docx", ".txt", ".xlsx", ".pptx"],
-    "Python": [".py", ".pyw"],
-    "java": [".java"],
-    "с++": [".cpp"],
-    "rust": [".rs"]
-**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/03826c14-5650-4bf4-9ad8-708285f52fa6" />
+
