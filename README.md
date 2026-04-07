@@ -55,7 +55,7 @@ cd file-organizer-linux
 nano sortconfig.json
 ```
 **Sample and default config:*
-}
+}**
     "Images": [".jpg", ".jpeg", ".png", ".gif", ".webp"],
     "Videos": [".mp4", ".mkv", ".mov", ".avi"],
     "Docs": [".pdf", ".docx", ".txt", ".xlsx", ".pptx"],
@@ -63,4 +63,4 @@ nano sortconfig.json
     "java": [".java"],
     "с++": [".cpp"],
     "rust": [".rs"]
-}
+}**
