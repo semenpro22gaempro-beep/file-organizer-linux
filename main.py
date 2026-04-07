@@ -2,7 +2,7 @@ import os
 import shutil
 from colorama import Fore, Style, init
 from tqdm import tqdm
-
+import json
 init(autoreset=True)
 
 def main():
@@ -128,13 +128,13 @@ def main():
             break
 
         elif cmd == "distr":
-            CATEGORIES = {
-            'Images': ['.jpg', '.jpeg', '.png', '.gif', '.webp'],
-            'Videos': ['.mp4', '.mkv', '.mov', '.avi'],
-            'Docs': ['.pdf', '.docx', '.txt', '.xlsx', '.pptx'],
-            'Music': ['.mp3', '.wav', '.flac'],
-            'Archives': ['.zip', '.rar', '.tar', '.gz']
-            }
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            config_path = os.path.join(script_dir, 'sortconfig.json')
+
+
+            with open(config_path, 'r') as f:
+                types = json.load(f)
+            CATEGORIES = types
             src_input = input(f"Folder to sort (inside ~): ")
             src_dir = os.path.join(home, src_input)
 

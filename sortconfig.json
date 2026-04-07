@@ -1,0 +1,10 @@
+{
+    "Images": [".jpg", ".jpeg", ".png", ".gif", ".webp"],
+    "Videos": [".mp4", ".mkv", ".mov", ".avi"],
+    "Docs": [".pdf", ".docx", ".txt", ".xlsx", ".pptx"],
+    "Python": [".py", ".pyw"],
+    "java": [".java"],
+    "с++": [".cpp"],
+    "rust": [".rs"] 
+}
+
