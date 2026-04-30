@@ -9,23 +9,21 @@ def main():
 
 
     organizer_art = rf"""
-    {Fore.BLUE}░░▒▒▓▓██████████████████████████████████████████████▓▓▒▒░░
-    {Fore.BLUE}░▒▓████████████████████████████████████████████████████▓▒░
-    {Fore.BLUE}▒▓██   {Fore.GREEN}{Style.BRIGHT}____  _____   ____    _    _   _ ___ _____ _____  {Fore.BLUE}██▓▒
-    {Fore.BLUE}▓██   {Fore.GREEN}{Style.BRIGHT}/ __ \|  __ \ / ___|  / \  | \ | |_ _|__  /| ____|  {Fore.BLUE}██▓
-    {Fore.BLUE}▓██  {Fore.GREEN}{Style.BRIGHT}| |  | | |__) | |  _  / _ \ |  \| || |  / / |  _|    {Fore.BLUE}██▓
-    {Fore.BLUE}▒▓██ {Fore.GREEN}{Style.BRIGHT}| |__| |  _  /| |_| |/ ___ \| |\  || | / /_ | |___   {Fore.BLUE}██▓▒
-    {Fore.BLUE}░▒▓██ {Fore.GREEN}{Style.BRIGHT}\____/|_| \_\ \____/_/   \_\_| \_|___/____||_____| {Fore.BLUE}██▓▒░
-    {Fore.BLUE}░░▒▒▓▓██████████████████████████████████████████████▓▓▒▒░░
+{Fore.BLUE} ____              _         
+{Fore.BLUE}|  _ \ ___ _______| | ____ _ 
+{Fore.BLUE}| |_) / _ \_  /_  / |/ / _` |
+{Fore.BLUE}|  _ <  __// / / /|   < (_| |
+{Fore.BLUE}|_| \_\___/___/___|_|\_\__,_|                             
     """
 
     print(organizer_art)
     g = "\033[32m"
     y = "\033[35m"
     r = "\033[31m"
+    print("-----------------------------Welcome------------------------------------")
     print(f" {y}[1]{y}{g}rm{g}     {y}[2]{y}{g}mv{g}     {y}[3]{y}{g}rn{g}     {y}[4]{y}{g}distr{g}   {y}[5]{y}{g}ls{g}\n"
     f" {y}[6]{y}{g}cd{g}     {y}[7]{y}{g}cdup{g}   {y}[8]{y}{g}cdpath{g} {y}[9]{y}{g}help{g}    {y}[10]{y}{g}exit{g}")
-
+    print("------------------------------------------------------------------------")
     while True:
 
         cmd = input("Command: ").strip().lower()
@@ -186,7 +184,11 @@ def main():
             f"distr- Automatically sort files into folders-Pictures-jpg,png\n"
             f"exit- Exit script\n"
             f"cd-back in\n" 
-            f"rn- Renames all files with the specified extension.")
+            f"rn- Renames all files with the specified extension\n"
+            f"cdpath- move on path\n"
+            f"cdup- move up\n"
+            f"ls- list dir\n"
+            f"help- all commands and definition\n")
         else:
             print(f"{r}Unknown command{r}\nall commands-help")
         
